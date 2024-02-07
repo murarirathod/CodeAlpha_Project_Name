@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class TravelItineraryPlanner {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.println("Welcome to the Travel Itinerary Planner!");
+        System.out.print("Enter your destination: ");
+        String destination = scanner.nextLine();
+
+        System.out.print("Enter your travel start date (YYYY-MM-DD): ");
+        String startDate = scanner.nextLine();
+
+        System.out.print("Enter your travel end date (YYYY-MM-DD): ");
+        String endDate = scanner.nextLine();
+
+        System.out.print("Enter your budget (in USD): ");
+        double budget = scanner.nextDouble();
+
+       
+        System.out.println("\nDestination: " + destination);
+        System.out.println("Travel Dates: " + startDate + " to " + endDate);
+        System.out.println("Budget: $" + budget);
+
+
+        System.out.println("\nWeather Information:");
+        System.out.println("Forecast for " + destination + " from " + startDate + " to " + endDate + ": Sunny");
+
+        
+        System.out.println("\nMap:");
+        System.out.println("Showing map for " + destination);
+
+     
+        double accommodationCost = budget * 0.4; // Assuming 40% of budget for accommodation
+        double remainingBudget = budget - accommodationCost;
+
+        System.out.println("\nAccommodation Cost (40% of Budget): $" + accommodationCost);
+        System.out.println("Remaining Budget: $" + remainingBudget);
+
+
+        System.out.println("\nGenerating itinerary based on preferences...");
+        System.out.println("Day 1: Explore " + destination);
+        System.out.println("Day 2: Visit attractions");
+        System.out.println("Day 3: Relax at the beach");
+
+    
+        scanner.close();
+    }
+}
